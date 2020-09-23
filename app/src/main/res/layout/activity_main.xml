@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.snailstudio2010.camera2.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--    <com.snailstudio2010.camera2.ui.FocusView-->
+    <!--        android:id="@+id/focus_view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:visibility="gone" />-->
+
+    <TextView
+        android:id="@+id/zoom_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="x4.0"
+        android:textColor="#ef5d5d"
+        android:textSize="19sp"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/mask_shutter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#001B1E1E"
+        android:visibility="invisible" />
+
+    <include layout="@layout/camera_bottom_controls" />
+
+    <SeekBar
+        android:id="@+id/seek_filter_intensity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="bottom"
+        android:max="100"
+        android:progress="100"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/menu_background"
+        android:gravity="end"
+        android:orientation="vertical" />
+
+    <include layout="@layout/camera_cover_layout" />
+</FrameLayout>
